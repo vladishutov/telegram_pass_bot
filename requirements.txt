@@ -2,3 +2,4 @@ aiogram==3.13.1
 aiosqlite==0.20.0
 pydantic<2.10; python_version < "3.11"
 pydantic>=2.4.1; python_version >= "3.11"
+pydantic-core==0
