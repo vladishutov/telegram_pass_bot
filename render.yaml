@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: telegram-pass-bot
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: DB_PATH
+        value: /var/data/passes.db
+    disk:
+      name: pass-bot-disk
+      mountPath: /var/data
+      sizeGB: 1
